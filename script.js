@@ -1,31 +1,46 @@
-
-let n=prompt("enter value of n :- ")
-for(let k=1;k<=n;k++){
-   if(n%k==0){                    // Check whether number is prime or not
-    console.log("It's not a prime number ");
-   }else{
-    console.log("It's  a prime number");
-   }
-}
-   
-let sum=0;
-for(let i=1;i<=n;i++){
-    console.log(i);
+let n=Number(prompt("enter n numbers :- "))
+ sum=0;
+ for(let i=0;i<=n;i++){
     sum=sum+i;
+ }
+ console.log(` the sum of n is ${sum}`); // this is code to find the sum of n integer 
+
+// this is code for print table of the n 
+ for(let t=1;t<=10;t++){
+    console.log(n + "*" + t + "=" + n*t);
+ }
+
+ // to fint the number is primenumber or not 
+
+ let isPrime = true;
+
+if (n <= 1) {
+    isPrime = false;
+} else {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
 }
-console.log( "The sum of n is :- ",sum); // To find the sum of  n
 
-
-console.log("To find the factor of n :-");
-for(let j=1;j<=n;j++){
-           if(n%j==0){
-            console.log(j);     // To find the factor of n
-           }
+if (isPrime) {
+    console.log("Prime Number");
+} else {
+    console.log("Not a Prime Number");
 }
 
+
+// To find the factor of n integer 
+for(let i=0;i<=n;i++){
+    if(n%i==0){
+        console.log(i);
+    }
+}
 
 // this is code to find the sum
-let d=prompt("enter the number")
+let d=139;
 let sum2=0;
 while(d>0){
     let digit=d%10;
@@ -60,6 +75,11 @@ if (sum === original) {
 } else {
     console.log(original + " is not an Armstrong Number");
 }
+
+
+
+
+
 
 
 
