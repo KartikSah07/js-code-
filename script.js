@@ -44,10 +44,10 @@ let d=139;
 let sum2=0;
 while(d>0){
     let digit=d%10;
-    sum= sum + digit;
+    sum2= sum2 + digit;
     d=Math.floor(d/10);
 }
-console.log("the sum of digit is :-", sum);
+console.log("the sum of digit is :-", sum2);
 
 
 // to find the Armstrong number
@@ -55,7 +55,7 @@ let A=Number(prompt("Enter your number :-"))
 let original = A;
 let temp = A;
 let count = 0;
-let sum = 0;
+let summ = 0;
 
 while (temp > 0) {
     count++;
@@ -66,11 +66,11 @@ temp = A;
 
 while (temp > 0) {
     let digit = temp % 10;
-    sum = sum + (digit ** count);
+    summ = summ + (digit ** count);
     temp = Math.floor(temp / 10);
 }
 
-if (sum === original) {
+if (summ === original) {
     console.log(original + " is an Armstrong Number");
 } else {
     console.log(original + " is not an Armstrong Number");
